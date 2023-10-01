@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Task Three</title>
+    <title>Task One</title>
+    <link rel="stylesheet" href="../../asets/css/bootstrap.css">
 </head>
 <body>
 <section class="container mt-3">
@@ -29,10 +30,22 @@
         document.querySelector("#cDis").innerText=document.querySelector("#txt").value;
     });
 
-
     document.querySelector("#btn1").addEventListener("click",function (){
         document.querySelector("#cDis").style.color='red';
     });
+
+
+    document.querySelector("#btn2").addEventListener('click',function(){
+        var typeValue=document.querySelector("#url").value;
+        var divContainer=document.querySelector("#img");
+
+        divContainer.style.background=`url(${typeValue})`;
+        divContainer.style.backgroundPosition='center';
+        divContainer.style.backgroundSize='contain';
+        divContainer.style.backgroundRepeat='no-repeat';
+    })
+
+
 
 </script>
 </body>
